@@ -3,6 +3,106 @@
    ========================================================================== */
    
    
-   // Mq breakepoints
-   $mqSmartphone:               320px;
-   $mqSmartphoneLandscape:      480px;
+// Mq breakepoints
+$mqSmartphone:               320px;
+$mqSmartphoneLandscape:      480px;
+$mqMobile:                   360px;
+$mqMobileLandscape:          640px;
+$mqTablet:                   768px;
+$mqTabletLangscape:          1024px;
+$mqBreakSm:                  800px;
+
+// Bootstrap
+$mqSmall:   $mqTablet;
+$mqMedium:  992px;
+$mqLage:    1200px;
+$mqXLarge:  1280px;   
+
+
+// Max width 320px
+@mixin smartphone() {
+  @media screen and (max-width: $mqSmartphone) {
+    @content;
+  }
+}
+
+// Max width 480px
+@mixin smartphone-landscape() {
+  @media screen and (max-width: $mqSmartphoneLandscape) {
+    @content;
+  }
+}
+
+// Max width 360px
+@mixin mobile() {
+  @media screen and (max-width: $mqMobile) {
+    @content;
+  }
+}
+
+// Max width 640px
+@mixin mobile-landscape() {
+  @media screen and (max-width: $mqMobileLandscape) {
+    @content;
+  }
+}
+
+// Max width 768px
+@mixin tablet() {
+  @media screen and (max-width: $mqTablet) {
+    @content;
+  }
+}
+
+// Max width 1024px
+@mixin tablet-landscape() {
+  @media screen and (max-width: $mqTabletLangscape) {
+    @content;
+  }
+}
+
+// Max width 800px
+@mixin break() {
+  @media screen and (max-width: $mqBreakSm) {
+    @content;
+  }
+}
+
+
+/* Bootstrap MQ 
+   ========================================================================== */
+   
+// < 768px
+@mixin xsmall() {
+  @media screen and (max-width: $mqSmall - 1) {
+    @content;
+  }
+}
+
+// >= 768px
+@mixin small() {
+  @media screen and (min-width: $mqSmall) and (max-width: $mqMedium - 1) {
+    @content;
+  }
+}
+
+// >= 992px
+@mixin medium() {
+  @media screen and (min-width: $mqMedium) and (max-width: $mqLage - 1) {
+    @content;
+  }
+}
+
+// >= 1200px
+@mixin large() {
+  @media screen and (min-width: $mqLage) and (max-width: $mqXLarge - 1) {
+    @content;
+  }
+}
+
+// >= 1280px
+@mixin large() {
+  @media screen and (min-width: $mqXLarge) {
+    @content;
+  }
+}
