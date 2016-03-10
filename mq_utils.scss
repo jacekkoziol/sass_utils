@@ -71,29 +71,35 @@ $mqXLarge:  1280px;
 
 /* Bootstrap MQ 
    ========================================================================== */
+// < 480px 
+@mixin xxsmall() {
+  @media screen and (max-width: $mqSmartphoneLandscape - 1) {
+    @content;
+  }
+} 
    
-// < 768px
+// >= 480px &&  < 768px
 @mixin xsmall() {
-  @media screen and (max-width: $mqSmall - 1) {
+  @media screen and (min-width: mqSmartphoneLandscape) and (max-width: $mqSmall - 1) {
     @content;
   }
 }
 
-// >= 768px
+// >= 768px && <= 991px
 @mixin small() {
   @media screen and (min-width: $mqSmall) and (max-width: $mqMedium - 1) {
     @content;
   }
 }
 
-// >= 992px
+// >= 992px && <= 1199px
 @mixin medium() {
   @media screen and (min-width: $mqMedium) and (max-width: $mqLage - 1) {
     @content;
   }
 }
 
-// >= 1200px
+// >= 1200px && <= 1279px
 @mixin large() {
   @media screen and (min-width: $mqLage) and (max-width: $mqXLarge - 1) {
     @content;
@@ -101,7 +107,7 @@ $mqXLarge:  1280px;
 }
 
 // >= 1280px
-@mixin large() {
+@mixin xlarge() {
   @media screen and (min-width: $mqXLarge) {
     @content;
   }
