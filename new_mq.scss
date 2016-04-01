@@ -16,7 +16,7 @@ $mq-breakpoints: (
   desktop-l:   2560px
 ) !default;
    
-// Bootstrap breakpoints
+// Bootstrap 4 breakpoints
 $grid-breakpoints: (
   // Extra small screen / phone
   xs: 0,
@@ -29,5 +29,7 @@ $grid-breakpoints: (
   // Extra large screen / wide desktop
   xl: 1200px
 ) !default;
-   
+
+
+// Mobile first Bootstrap    
    
