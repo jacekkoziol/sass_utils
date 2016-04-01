@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Media queries Utilities
+   ========================================================================== */
+   
+// Custom breakpoints
+$mq-breakpoints: (
+  mobile-s:    320px,
+  mobile-m:    375px,
+  mobile-l:    425px,
+  tablet-s:    640px,
+  tablet-m:    768px,
+  laptop-s:    1024px,
+  laptop-m:    1280px,
+  laptop-l:    1440px,
+  desktop-m:   1920px,
+  desktop-l:   2560px
+) !default;
+   
+// Bootstrap breakpoints
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+) !default;
+   
+   
