@@ -27,6 +27,14 @@ $container-max-widths: (
   xl: 1140px
 ) !default;
 
+//Media queries start points
+$mqPhone: 0px;
+$mqPhablet: 481px;
+$mqTablet: 768px;
+$mqDesktop: 992px;
+$mqWideScreen: 1200px;
+
+
 //Mobile first
 @mixin mobile-xs () {
   @media screen and (max-width: $mqSmartphone) {
