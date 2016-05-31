@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Media queries Bootstrap 4 brakepoints
+   ========================================================================== */
+   
+$bs-xs: 360px;   
+$bs-sm: 544px;
+$bs-md: 768px;
+$bs-lg: 992px;
+$bs-xl: 1200px;
+
+@mixin bs-xs-media () {
+  @media screen and (min-width: $bs-xs) {
+    @content;
+  }
+}
+
+@mixin bs-sm-media () {
+  @media screen and (min-width: $bs-sm) {
+    @content;
+  }
+}
+
+@mixin bs-md-media () {
+  @media screen and (min-width: $bs-md) {
+    @content;
+  }
+}
+
+@mixin bs-lg-media () {
+  @media screen and (min-width: $bs-lg) {
+    @content;
+  }
+}
+
+@mixin bs-xl-media () {
+  @media screen and (min-width: $bs-xl) {
+    @content;
+  }
+}
