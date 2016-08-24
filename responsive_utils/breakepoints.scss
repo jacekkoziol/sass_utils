@@ -1,0 +1,41 @@
+// Breakepoints
+//--------------------------------------------------------------
+
+// Breakepoints
+$screen-small:    320px !default;
+$screen-avarage:  480px !default;
+$screen-medium:   768px !default;
+$screen-large:    1024px !default;
+$screen-full:     1600px !default;
+
+// Min breakepoints
+$screen-small-min:    $screen-small !default;
+$screen-avarage-min:  $screen-avarage !default;
+$screen-medium-min:   $screen-medium !default;
+$screen-large-min:    $screen-large !default;
+$screen-full-min:     $screen-full !default;
+
+// Max breakepoints
+$screen-small-max:    ($screen-avarage - 1) !default;
+$screen-avarage-max:  ($screen-medium - 1) !default;
+$screen-medium-max:   ($screen-large - 1) !default;
+$screen-large-max:    ($screen-full - 1) !default;
+$screen-full-max:     (4000 - 1) !default;
+
+
+// Breakepoints map
+$mapBreakepoints: (
+  small:    $screen-small,
+  avarage:  $screen-avarage,
+  medium:   $screen-medium,
+  large:    $screen-large,
+  full:     $screen-full
+);
+
+$mapBreakepointsMax: (
+  small:    $screen-small-max,
+  avarage:  $screen-avarage-max,
+  medium:   $screen-medium-max,
+  large:    $screen-large-max,
+  full:     $screen-full-max
+)

@@ -1,0 +1,84 @@
+/*
+ ** Set rules only for defined breakepoint name
+ **
+ ** @access public
+ ** @param {Breakepoint name} $breakpoint - Available breakepoint map
+ **/
+@mixin respond-to($breakpoint) { 
+  @if map-has-key($mapBreakepoints, $breakpoint) and map-has-key($mapBreakepointsMax, $breakpoint) {
+    @media (min-width: #{map-get($mapBreakepoints, $breakpoint)}) and (max-width: #{map-get($mapBreakepointsMax, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$mapBreakepoints` and `$mapBreakepointsMax` map.";
+  }
+}
+
+/*
+ ** Set rules from defined breakepoint name
+ **
+ ** @access public
+ ** @param {Breakepoint name} $breakpoint - Available breakepoint map
+ **/
+@mixin respond-to-min($breakpoint) { 
+  @if map-has-key($mapBreakepoints, $breakpoint) {
+    @media (min-width: #{map-get($mapBreakepoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$mapBreakepoints` map.";
+  }
+}
+
+/*
+ ** Set rules up to defined breakepoint name
+ **
+ ** @access public
+ ** @param {Breakepoint name} $breakpoint - Available breakepoint map
+ **/
+@mixin respond-to-max($breakpoint) { 
+  @if map-has-key($mapBreakepointsMax, $breakpoint) {
+    @media (max-width: #{map-get($mapBreakepointsMax, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$mapBreakepointsMax` map.";
+  }
+}
+
+
+/*
+ ** Generate specified class for all breakepoints
+ **
+ ** @access public
+ **/
+@mixin iterate-breakpoints() {
+  @each $bpName, $bpPixels in $mapBreakepoints {
+
+    // @media min-width
+    &--#{$bpName} {
+      @include respond-to-min($bpName) {
+        @content;
+      }
+    } 
+
+    // @media max-width
+    &--#{$bpName}-max{
+      @include respond-to-max($bpName) {
+        @content;
+      }
+    }
+
+    &--#{$bpName}-only{
+      @include respond-to($bpName) {
+        @content;
+      }
+    }
+  }
+}

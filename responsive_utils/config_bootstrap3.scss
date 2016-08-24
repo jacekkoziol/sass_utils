@@ -1,0 +1,51 @@
+// Bootstrap configuration
+//--------------------------------------------------------------
+
+// Breakepoints
+$screen-xs:                  0px !default; //480
+$screen-sm:                  480px !default; //768
+$screen-md:                  768px !default; //1024
+$screen-lg:                  1024px !default; //1200
+
+// Min breakepoints
+$screen-xs-min:              $screen-xs !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-md-min:              $screen-md !default;
+$screen-lg-min:              $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+// Container sizings
+$container-width:       828px !default;
+$container-padding:     20px !default;
+$container-padding-md:  50px !default;
+
+// Grid definitions
+$grid-columns:          12;
+$grid-gutter-width:     16px;
+$container-tablet:      100% !default;      // (454px + $grid-gutter-width) !default;
+$container-desktop:     100% !default;      //730px !default;    //(760px + $grid-gutter-width) !default;
+$container-large-desktop: $container-width + ($container-padding-md * 2);
+
+
+// Maps
+//--------------------------------------------------------------
+
+// Breakepoints Map
+$mapBreakepoints: (
+  xs: $screen-xs,
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg
+);
+
+// Maximum breakepoints
+$mapBreakepointsMax: (
+  xs: $screen-xs-max,
+  sm: $screen-sm-max,
+  md: $screen-md-max,
+  lg: (4000px - 1)
+)
