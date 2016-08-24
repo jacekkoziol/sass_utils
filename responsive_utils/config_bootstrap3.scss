@@ -1,13 +1,13 @@
 // Bootstrap configuration
 //--------------------------------------------------------------
 
-// Breakepoints
+// breakpoints
 $screen-xs:                  0px !default; //480
 $screen-sm:                  480px !default; //768
 $screen-md:                  768px !default; //1024
 $screen-lg:                  1024px !default; //1200
 
-// Min breakepoints
+// Min breakpoints
 $screen-xs-min:              $screen-xs !default;
 $screen-sm-min:              $screen-sm !default;
 $screen-md-min:              $screen-md !default;
@@ -34,16 +34,16 @@ $container-large-desktop: $container-width + ($container-padding-md * 2);
 // Maps
 //--------------------------------------------------------------
 
-// Breakepoints Map
-$mapBreakepoints: (
+// breakpoints Map
+$mapbreakpoints: (
   xs: $screen-xs,
   sm: $screen-sm,
   md: $screen-md,
   lg: $screen-lg
 );
 
-// Maximum breakepoints
-$mapBreakepointsMax: (
+// Maximum breakpoints
+$mapbreakpointsMax: (
   xs: $screen-xs-max,
   sm: $screen-sm-max,
   md: $screen-md-max,
