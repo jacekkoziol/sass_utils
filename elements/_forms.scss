@@ -1,0 +1,82 @@
+/*
+ ** Element - Form Elements
+ ** -----------------------------------------------------------------------------*/
+
+$local-form-color-border:      #777;
+$local-form-bg-color:          #FFF;
+$local-form-txt-color:         #000;
+$local-form-placeholder-color: #777;
+$local-form-border-radius:     5px; 
+
+form {
+  display: block;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid $local-form-color-border;
+  border-radius: $local-form-border-radius;
+  background-color: $local-form-bg-color;
+  padding: 0.2rem 1.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.033rem;
+  color: $local-form-txt-color;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $local-form-placeholder-color;
+    font-size: normal;
+    font-size: 1.4rem;
+  }
+
+  &:-moz-focusring,
+  &::-moz-focus-inner {
+    outline: none !important;
+    text-shadow: 0 0 0 #000;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  -ms-appearance:    none;
+  appearance:         none;
+  background-image: url('../assets/images/common/arrow-down.svg');
+  background-size: 1.4rem 0.8rem;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:required:invalid {
+    color: $local-form-placeholder-color;
+  }
+
+  &.parsley-error:required:invalid {
+    color: #D00;
+  }
+}
+
+option {
+  padding: 0.1rem 1.5rem;
+  color: $color-black;
+
+  &[data-select-default-option]  {
+    display: none;
+  }
+}
+
