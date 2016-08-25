@@ -1,0 +1,23 @@
+// Utilities - Align
+//------------------------------------------------------------------------------
+
+.u-align-left {
+  text-align: left;
+  @include iterate-breakpoints {
+    text-align: left;
+  }
+}
+
+.u-align-center {
+  text-align: center;
+  @include iterate-breakpoints {
+    text-align: center;
+  }
+}
+
+.u-align-right {
+  text-align: right;
+  @include iterate-breakpoints {
+    text-align: right;
+  }
+}
