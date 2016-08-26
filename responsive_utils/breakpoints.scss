@@ -30,7 +30,7 @@ $mapbreakpoints: (
   medium:   $screen-medium,
   large:    $screen-large,
   full:     $screen-full
-);
+) !default;
 
 $mapbreakpointsMax: (
   small:    $screen-small-max,
@@ -38,4 +38,4 @@ $mapbreakpointsMax: (
   medium:   $screen-medium-max,
   large:    $screen-large-max,
   full:     $screen-full-max
-)
+) !default;

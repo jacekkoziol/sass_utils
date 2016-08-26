@@ -80,7 +80,7 @@ $mapbreakpoints: (
   sm: $screen-sm,
   md: $screen-md,
   lg: $screen-lg
-);
+) !default;
 
 // Maximum breakpoints
 $mapbreakpointsMax: (
@@ -88,4 +88,4 @@ $mapbreakpointsMax: (
   sm: $screen-sm-max,
   md: $screen-md-max,
   lg: (4000px - 1)
-)
+) !default;
