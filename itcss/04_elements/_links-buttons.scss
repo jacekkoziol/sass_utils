@@ -1,0 +1,41 @@
+/*
+ ** Elements - A, buttons
+ ** -----------------------------------------------------------------------------*/
+
+a, button, [type="button"] {
+  cursor: pointer;
+  color: currentColor;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  color: currentColor;
+
+  &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

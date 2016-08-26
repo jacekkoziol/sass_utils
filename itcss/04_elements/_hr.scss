@@ -1,0 +1,14 @@
+/*
+ ** Element - horizontal line
+ ** -----------------------------------------------------------------------------*/
+
+hr {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  clear: both;
+  border: none;
+  height: 2px;
+  background-color: currentColor;
+  box-sizing: border-box;
+}
