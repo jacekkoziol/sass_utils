@@ -10,6 +10,10 @@
 
   @for $i from 0 through 10 {
     &--#{$i}{
+        margin-top: #{$i}rem;
+    }
+
+    &--#{$i}{
       @include iterate-breakpoints {
         margin-top: #{$i}rem;
       }
