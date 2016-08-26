@@ -1,0 +1,91 @@
+// Settings global
+
+// Colors
+//----------------------------------------
+$color-white: #FFF;
+$color-black: #000;
+
+$color-text-base:         #1d1f20 !default;
+$color-body-bg:           #FFFFFF !default;
+
+$color-success:           #50af21 !default;
+$color-error:             #c72c2c !default;
+
+
+// Fonts
+//----------------------------------------
+$font-font-name: 'Font Name';
+
+$font-color:            $color-text-base !default;
+$font-family:           $font-vw-txt !default;
+$font-size:             1.5em !default;
+$font-weight:           400 !default;
+$font-line-height:      1.2em !default;
+
+
+// Border radius
+//----------------------------------------
+$border-radius-base:    4px !default;
+
+
+// Z-indexes
+//----------------------------------------
+$zindex-negative:       -1 !default;
+$zindex-neutral:        0 !default;
+$zindex-base:           1 !default;
+$zindex-utils:          5 !default;
+$zindex-menu:           10 !default;
+$zindex-modal:          1050 !default;
+
+
+
+// Bootstrap configuration
+//--------------------------------------------------------------
+
+// Breakepoints
+$screen-xs:                  480px !default; //480
+$screen-sm:                  768px !default; //768
+$screen-md:                  992px !default; //1024
+$screen-lg:                  1200px !default; //1200
+
+// Min breakepoints
+$screen-xs-min:              $screen-xs !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-md-min:              $screen-md !default;
+$screen-lg-min:              $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+// Container sizings
+$container-width:           1140px !default;
+$container-padding:         20px !default;
+
+// Grid definitions
+$grid-columns:              12 !default;
+$grid-gutter-width:         30px !default;
+$container-tablet:          (720px + $grid-gutter-width) !default;
+$container-desktop:         (940px + $grid-gutter-width) !default;
+$container-large-desktop:   $container-width + ($container-padding-md * 2);
+
+
+// Maps
+//--------------------------------------------------------------
+
+// Breakpoints Map
+$mapbreakpoints: (
+  xs: $screen-xs,
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg
+);
+
+// Maximum breakpoints
+$mapbreakpointsMax: (
+  xs: $screen-xs-max,
+  sm: $screen-sm-max,
+  md: $screen-md-max,
+  lg: (4000px - 1)
+)
