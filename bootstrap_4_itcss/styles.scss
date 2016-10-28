@@ -23,8 +23,14 @@
 @import './styles/04_elements/body';
 @import './styles/04_elements/img';
 
+// Objects
 // @import './styles/05_objects/global';
+
+// Components
 // @import './styles/06_components/global';
 
 // Utilities
+@import './styles/07_trumps/utilities';
 @import './styles/07_trumps/align';
+@import './styles/07_trumps/hide';
+@import './styles/07_trumps/show';

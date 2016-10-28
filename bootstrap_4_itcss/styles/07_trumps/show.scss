@@ -1,0 +1,53 @@
+// Common - Utilities show
+//------------------------------------------------------------------------------
+[class*="u-show"] {
+  display: none;
+}
+
+.u-show {
+  @include iterate-breakpoints {
+    display: block;
+  }
+}
+
+.u-show-inline {
+  @include iterate-breakpoints {
+    display: inline;
+  }
+}
+
+.u-show-iblock {
+  @include iterate-breakpoints {
+    display: inline-block;
+  }
+}
+
+.u-show-thead {
+  @include iterate-breakpoints {
+    display: table-header-group;
+  }
+}
+
+.u-show-tfoot {
+  @include iterate-breakpoints {
+    display: table-footer-group;
+  }
+}
+
+.u-show-tcell {
+  @include iterate-breakpoints {
+    display: table-cell;
+  }
+}
+
+.u-show-flex {
+  @include iterate-breakpoints {
+    display: flex;
+  }
+}
+
+.u-show-iflex {
+  @include iterate-breakpoints {
+    display: inline-flex;
+  }
+}

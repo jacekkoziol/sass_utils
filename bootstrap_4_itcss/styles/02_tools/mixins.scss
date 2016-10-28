@@ -67,20 +67,20 @@
   @each $bpName, $bpPixels in $grid-breakpoints {
 
     // @media min-width
-    &--#{$bpName} {
+    &-#{$bpName} {
       @include respond-to-min($bpName) {
         @content;
       }
     }
 
     // @media max-width
-    &--#{$bpName}-max{
+    &-#{$bpName}-max{
       @include respond-to-max($bpName) {
         @content;
       }
     }
 
-    &--#{$bpName}-only{
+    &-#{$bpName}-only{
       @include respond-to($bpName) {
         @content;
       }

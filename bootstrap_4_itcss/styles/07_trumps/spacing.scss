@@ -1,0 +1,65 @@
+// Common - Utilities Spacing
+//------------------------------------------------------------------------------
+
+.u-spacing {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  clear: both;
+
+  @for $i from 0 through 10 {
+    &--#{$i}{
+        margin-top: #{$i}rem;
+    }
+
+    &--#{$i}{
+      @include iterate-breakpoints {
+        margin-top: #{$i}rem;
+      }
+    }
+
+    &--#{$i}-#{5}{
+      @include iterate-breakpoints {
+        margin-top: #{$i}-#{5}rem;
+      }
+    }
+
+    &--bottom-#{$i} {
+      @include iterate-breakpoints {
+        margin-bottom: #{$i}rem;
+      }
+    }
+
+    &--bottom-#{$i}-#{5} {
+      @include iterate-breakpoints {
+        margin-bottom: #{$i}#{.5}rem;
+      }
+    }
+
+    &--left-#{$i} {
+      @include iterate-breakpoints {
+        margin-left: #{$i}rem;
+      }
+    }
+
+    &--left-#{$i}-#{5} {
+      @include iterate-breakpoints {
+        margin-left: #{$i}#{.5}rem;
+      }
+    }
+
+    &--right-#{$i} {
+      @include iterate-breakpoints {
+        margin-left: #{$i}rem;
+      }
+    }
+
+    &--right-#{$i}-#{5} {
+      @include iterate-breakpoints {
+        margin-left: #{$i}#{.5}rem;
+      }
+    }
+
+  }
+}

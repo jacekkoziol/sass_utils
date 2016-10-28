@@ -1,0 +1,8 @@
+// Common - Utilities hide
+//------------------------------------------------------------------------------
+
+.u-hide {
+  @include iterate-breakpoints {
+    display: none;
+  }
+}
