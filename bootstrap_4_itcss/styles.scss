@@ -1,0 +1,30 @@
+/*
+  Project SinglePoint
+  Author: X-Five
+*/
+
+// Settings
+@import './styles/01_settings/global.scss';
+
+//Tools
+@import './styles/02_tools/functions';
+@import './styles/02_tools/mixins';
+
+// Vendors
+@import '../node_modules/normalize-scss/sass/normalize/import-now';
+@import '../node_modules/bootstrap/scss/_variables';
+@import '../node_modules/bootstrap/scss/_mixins';
+@import '../node_modules/bootstrap/scss/_grid';
+
+// Generic
+@import './styles/03_generic/base';
+
+// Elements
+@import './styles/04_elements/body';
+@import './styles/04_elements/img';
+
+// @import './styles/05_objects/global';
+// @import './styles/06_components/global';
+
+// Utilities
+@import './styles/07_trumps/align';

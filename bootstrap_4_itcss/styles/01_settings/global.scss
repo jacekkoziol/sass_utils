@@ -1,0 +1,75 @@
+/*
+ ** Global settings
+ ** -----------------------------------------------------------------------------*/
+
+// Colors
+//----------------------------------------
+$color-white: #FFF;
+$color-black: #000;
+
+$color-text-base:         #1d1f20 !default;
+$color-body-bg:           #FFFFFF !default;
+
+// Fonts
+//----------------------------------------
+$font-base: Arial, Verdana, Helvetica, sans-serif;
+
+$font-color:            $color-text-base !default;
+$font-family:           $font-base !default;
+$font-size:             1.6em !default;
+$font-weight:           400 !default;
+$font-line-height:      1.2em !default;
+
+// Border radius
+//----------------------------------------
+$border-radius-base: 4px !default;
+
+
+// Z-indexes
+//----------------------------------------
+$zindex-negative:       -1 !default;
+$zindex-neutral:        0 !default;
+$zindex-base:           1 !default;
+$zindex-utils:          5 !default;
+$zindex-menu:           10 !default;
+
+
+// Bootstrap grid configuration
+//----------------------------------------
+$grid-columns:      12;
+$grid-gutter-width-base: 30px;
+
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+);
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+
+// Custom max breakepoints
+//----------------------------------------
+$grid-breakpoints-max: (
+  xs: map-get($grid-breakpoints , sm) - 1,
+  sm: map-get($grid-breakpoints , md) - 1,
+  md: map-get($grid-breakpoints , lg) - 1,
+  lg: map-get($grid-breakpoints , xl) - 1,
+  xl: map-get($grid-breakpoints , xl) + 4000
+);

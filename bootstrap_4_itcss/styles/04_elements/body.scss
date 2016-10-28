@@ -1,0 +1,19 @@
+/*
+ ** Element - Body
+ ** -----------------------------------------------------------------------------*/
+
+body {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow: hidden;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: $font-weight;
+  line-height: $font-line-height;
+  color: $font-color;
+  background-color: $color-body-bg;
+}
