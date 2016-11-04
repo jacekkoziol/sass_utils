@@ -13,6 +13,10 @@
         margin-top: #{$i}rem;
     }
 
+    &--#{$i}-#{5}{
+        margin-top: #{$i}#{.5}rem;
+    }
+
     &--#{$i}{
       @include iterate-breakpoints {
         margin-top: #{$i}rem;
@@ -21,7 +25,7 @@
 
     &--#{$i}-#{5}{
       @include iterate-breakpoints {
-        margin-top: #{$i}-#{5}rem;
+        margin-top: #{$i}#{.5}rem;
       }
     }
 
