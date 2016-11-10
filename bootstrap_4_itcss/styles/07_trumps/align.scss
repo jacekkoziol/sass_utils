@@ -21,3 +21,10 @@
     text-align: right;
   }
 }
+
+.u-align-justify {
+  text-align: justify;
+  @include iterate-breakpoints {
+    text-align: justify;
+  }
+}
