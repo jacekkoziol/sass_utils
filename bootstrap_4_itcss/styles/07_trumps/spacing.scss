@@ -10,60 +10,68 @@
 
   @for $i from 0 through 10 {
     &--#{$i}{
-        margin-top: #{$i}rem;
-    }
+      margin-top: #{$i}rem;
 
-    &--#{$i}-#{5}{
-        margin-top: #{$i}#{.5}rem;
-    }
-
-    &--#{$i}{
       @include iterate-breakpoints {
         margin-top: #{$i}rem;
       }
     }
 
     &--#{$i}-#{5}{
+      margin-top: #{$i}#{.5}rem;
+
       @include iterate-breakpoints {
         margin-top: #{$i}#{.5}rem;
       }
     }
+
 
     &--bottom-#{$i} {
+      margin-bottom: #{$i}rem;
+
       @include iterate-breakpoints {
         margin-bottom: #{$i}rem;
       }
     }
 
     &--bottom-#{$i}-#{5} {
+      margin-bottom: #{$i}#{.5}rem;
+
       @include iterate-breakpoints {
         margin-bottom: #{$i}#{.5}rem;
       }
     }
 
     &--left-#{$i} {
+      margin-left: #{$i}rem;
+
       @include iterate-breakpoints {
         margin-left: #{$i}rem;
       }
     }
 
     &--left-#{$i}-#{5} {
+      margin-left: #{$i}#{.5}rem;
+
       @include iterate-breakpoints {
         margin-left: #{$i}#{.5}rem;
       }
     }
 
     &--right-#{$i} {
+      margin-left: #{$i}rem;
+
       @include iterate-breakpoints {
         margin-left: #{$i}rem;
       }
     }
 
     &--right-#{$i}-#{5} {
+      margin-left: #{$i}#{.5}rem;
+
       @include iterate-breakpoints {
         margin-left: #{$i}#{.5}rem;
       }
     }
-
   }
 }

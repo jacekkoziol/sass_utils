@@ -1,0 +1,84 @@
+// Common - Utilities Flex Box
+//------------------------------------------------------------------------------
+
+.u-flex {
+  display: flex;
+  display: -webkit-flex; //iOS 8 FIX
+  flex-wrap: wrap;
+ 	flex-direction: row;
+
+  &::before,
+  &::after {
+    content: initial;
+  }
+
+  &--children {
+    > *{
+      flex: 0 0 auto;
+    }
+  }
+
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &--to-top {
+    align-items: flex-start;
+  }
+
+  &--to-bottom {
+    align-items: flex-end;
+  }
+
+  &--to-middle {
+    align-items: center;
+  }
+
+  &--spread {
+    -webkit-justify-content: space-between; //iOS 8 FIX
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--columns {
+    flex-direction: column;
+  }
+
+  @for $i from 1 through 10 {
+    &--order-#{$i} {
+      order: $i;
+    }
+  }
+
+  @each $bpName, $bpSize in $arrBreakepoints {
+
+    // only for this breakpoint
+    @include respond-to($bpName) {
+      &--order-initial-#{$bpName} {
+        order: 1;
+      }
+    }
+
+    // for breakpoint and higher
+    @include respond-to-min($bpName) {
+      &--order-initial-min-#{$bpName} {
+        order: 1;
+      }
+    }
+
+    // up to this breakpoint
+    @include respond-to-max($bpName) {
+      &--order-initial-max-#{$bpName} {
+        order: 1;
+      }
+    }
+  }
+}

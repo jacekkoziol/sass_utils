@@ -1,0 +1,13 @@
+// Utilities - Colors
+//------------------------------------------------------------------------------
+
+@each $colorName, $colorValue in $mapColors {
+  .u-color-#{$colorName} {
+    color: $colorValue;
+    fill: $colorValue;
+  }
+
+  .u-bg-#{$colorName} {
+    background-color: $colorValue;
+  }
+}

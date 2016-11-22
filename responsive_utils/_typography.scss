@@ -1,0 +1,64 @@
+// Common - Utilities typography
+//------------------------------------------------------------------------------
+
+.u-t-weight {
+  @for $i from 1 through 9 {
+    &--#{$i * 100} {
+      font-weight: #{$i * 100};
+    }
+  }
+}
+
+.u-t-size {
+  @for $i from 0 through 3 {
+    &--#{$i}em {
+      font-size: #{$i}em;
+    }
+
+    &--#{$i}rem {
+      font-size: #{$i}rem;
+    }
+
+    @for $j from 1 through 9 {
+      &--#{$i}-#{$j}em {
+        font-size:  #{$i + $j / 10}em;
+      }
+
+      &--#{$i}-#{$j}rem {
+        font-size:  #{$i + $j / 10}rem;
+      }
+    }
+  }
+}
+
+.u-t-style {
+  &--normal {
+    font-style: normal;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+}
+
+.u-t-decoration {
+  &--underline{
+    text-decoration: underline;
+  }
+
+  &--none{
+    text-decoration: none;
+  }
+}
+
+.u-t-upper {
+  text-transform: uppercase;
+}
+
+.u-t-lower {
+  text-transform: lowercase;
+}
+
+.u-t-cap {
+  text-transform: capitalize;
+}
