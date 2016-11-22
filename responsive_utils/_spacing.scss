@@ -59,18 +59,18 @@
     }
 
     &--right-#{$i} {
-      margin-left: #{$i}rem;
+      margin-right: #{$i}rem;
 
       @include iterate-breakpoints {
-        margin-left: #{$i}rem;
+        margin-right: #{$i}rem;
       }
     }
 
     &--right-#{$i}-#{5} {
-      margin-left: #{$i}#{.5}rem;
+      margin-right: #{$i}#{.5}rem;
 
       @include iterate-breakpoints {
-        margin-left: #{$i}#{.5}rem;
+        margin-right: #{$i}#{.5}rem;
       }
     }
   }
