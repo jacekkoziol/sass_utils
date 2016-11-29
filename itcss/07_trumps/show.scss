@@ -11,42 +11,56 @@
 }
 
 .u-show-inline {
+  display: inline;
+
   @include iterate-breakpoints {
     display: inline;
   }
 }
 
 .u-show-iblock {
+  display: inline-block;
+
   @include iterate-breakpoints {
     display: inline-block;
   }
 }
 
 .u-show-thead {
+  display: table-header-group;
+
   @include iterate-breakpoints {
     display: table-header-group;
   }
 }
 
 .u-show-tfoot {
+  display: table-footer-group;
+
   @include iterate-breakpoints {
     display: table-footer-group;
   }
 }
 
 .u-show-tcell {
+  display: table-cell;
+
   @include iterate-breakpoints {
     display: table-cell;
   }
 }
 
 .u-show-flex {
+  display: flex;
+
   @include iterate-breakpoints {
     display: flex;
   }
 }
 
 .u-show-iflex {
+  display: inline-flex;
+
   @include iterate-breakpoints {
     display: inline-flex;
   }
